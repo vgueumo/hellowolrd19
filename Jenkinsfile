@@ -28,9 +28,9 @@ pipeline {
   }
   failaure {
     echo "build failed"
-  }
+   }
+ }
 }
-
 
     
   

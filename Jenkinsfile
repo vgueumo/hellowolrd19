@@ -22,9 +22,7 @@ pipeline {
           }
        }
     }
-}
-
-post {
+  post {
   always {
    echo "always"
   }
@@ -32,6 +30,7 @@ post {
     echo "build failed"
   }
 }
-    
+
+
     
   

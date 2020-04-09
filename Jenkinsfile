@@ -6,7 +6,13 @@ pipeline {
           echo "hello world"
           }
        }
-    stage('test'){
+    stage('test'){ 
+      when {
+        expression {
+            BRANCH_NAME == 'dev' 
+        }
+      
+      }
         steps {
           echo "hello world"
           }

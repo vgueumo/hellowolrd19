@@ -19,6 +19,7 @@ pipeline {
           echo "hello world"
           sh 'mvn clean'
           sh 'mvn install'
+          sh 'mvn package'
           }
        }
     stage('deployment'){

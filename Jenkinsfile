@@ -25,6 +25,7 @@ pipeline {
     stage('deployment'){
         steps {
           echo "hello world"
+          curl --upload-file /var/lib/jenkins/workspace/hellopipe/webapp/target/*.war "http://deploy:deploy@3.91.226.58:8080/manager/deploy?path=/<context>&update=true"
           }
        }
     }

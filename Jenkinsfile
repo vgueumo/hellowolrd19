@@ -26,7 +26,7 @@ pipeline {
   always {
    echo "always"
   }
-  failaure {
+  failure {
     echo "build failed"
    }
  }

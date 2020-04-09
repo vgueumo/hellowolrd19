@@ -6,5 +6,20 @@ pipeline {
           echo "hello world"
           }
        }
+    stage('test'){
+        steps {
+          echo "hello world"
+          }
+       }
+    stage('deploy'){
+        steps {
+          echo "hello world"
+          }
+       }
+    stage('deployment'){
+        steps {
+          echo "hello world"
+          }
+       }
     }
 }

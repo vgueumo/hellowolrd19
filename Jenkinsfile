@@ -23,3 +23,15 @@ pipeline {
        }
     }
 }
+
+post {
+  always {
+   echo "always"
+  }
+  failaure {
+    echo "build failed"
+  }
+}
+    
+    
+  

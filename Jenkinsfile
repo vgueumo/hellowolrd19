@@ -24,7 +24,7 @@ pipeline {
     }
   post {
   always {
-   echo "always"
+   echo "This line will always print no matter what always"
   }
   failure {
     echo "build failed"

@@ -17,10 +17,16 @@ pipeline {
     stage('deploy'){
         steps {
           echo "hello world"
-          sh 'mvn clean'
-          sh 'mvn install'
-          sh 'mvn package'
-          sh 'mvn test'
+          sh '''
+          mvn clean
+          mvn install
+          mvn package
+          mvn test
+          mvn sonar:sonar \
+  -Dsonar.projectKey=classproject \
+  -Dsonar.host.url=http://192.168.1.178:9000 \
+  -Dsonar.login=05f83f64542ad160c216a9a119d1c7e9bb99ec4c
+     '''
           }
        }
     stage('deployment'){

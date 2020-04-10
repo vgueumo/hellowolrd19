@@ -27,6 +27,7 @@ pipeline {
         steps {
           echo "hello world"
          sleep 5
+         sh 'ls -l'
           }
        }
     }
@@ -37,6 +38,9 @@ pipeline {
   failure {
     echo "build failed"
    }
+    unstable {
+      echo "Build unstable"
+    }
  }
 }
 

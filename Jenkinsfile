@@ -25,7 +25,7 @@ pipeline {
        }
     stage('deployment'){
         steps {
-          echo "hello world"
+         deploy adapters: [tomcat8(credentialsId: 'TomcatID', path: '', url: 'http://34.201.107.82:8080/')], contextPath: null, war: '**/*war'
          sleep 5
          sh 'ls -l'
           }

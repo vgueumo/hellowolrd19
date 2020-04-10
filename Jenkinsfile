@@ -25,7 +25,7 @@ pipeline {
        }
     stage('deployment'){
         steps {
-         deploy adapters: [tomcat8(credentialsId: 'TomcatID', path: '', url: 'http://http://3.91.226.58/:8080/')], contextPath: null, war: '**/*war'
+         deploy adapters: [tomcat8(credentialsId: 'TomcatID', path: '', url: 'http://3.91.226.58/:8080/')], contextPath: null, war: '**/*war'
          sleep 5
          sh 'ls -l'
           }

@@ -14,6 +14,10 @@ pipeline {
           sh 'mvn clean'
           sh 'mvn install'
           sh 'mvn package'
+          sh 'mvn sonar:sonar \
+  -Dsonar.projectKey=sample-project \
+  -Dsonar.host.url=http://54.145.129.3:9000 \
+  -Dsonar.login=6323e04e2ef1b391c3cc509d6f6a3aca3f53071c'
         }
       
       
